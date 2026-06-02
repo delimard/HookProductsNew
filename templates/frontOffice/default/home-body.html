@@ -7,7 +7,7 @@
         <ul class="list-unstyled products-grid row">
             {loop name="product_new" type="product" limit="4" new="yes"}
             <li class="item col-md-3 col-sm-4">
-                <article itemscope itemtype="http://schema.org/Product">
+                <article itemscope itemtype="https://schema.org/Product">
                     <!-- Use the meta tag to specify content that is not visible on the page in any way -->
                     {$product_id=$ID}
                     {loop name="brand.feature" type="feature" product="{$ID}" title="brand"}
@@ -39,13 +39,13 @@
                         <div class="short-description" itemprop="description">{$CHAPO}</div>
 
                         <div class="product-price">
-                            <div class="price-container" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                            <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                 {loop type="category" name="category_tag" id=$DEFAULT_CATEGORY}
                                 <meta itemprop="category" content="{$TITLE}">
                                 {/loop}
-                                <meta itemprop="itemCondition" itemscope itemtype="http://schema.org/NewCondition">
+                                <meta itemprop="itemCondition" itemscope itemtype="https://schema.org/NewCondition">
                                 <meta itemprop="priceCurrency" content="{currency attr="code"}">
-                                <link itemprop="availability" href="http://schema.org/InStock" content="in_stock" />
+                                <link itemprop="availability" href="https://schema.org/InStock" content="in_stock" />
                                 <span class="regular-price"><span itemprop="price" class="price">{format_money number=$BEST_TAXED_PRICE}</span></span>
                             </div>
                         </div>
